@@ -218,7 +218,7 @@ artists[2].bio;
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-artists[8].name = "Vincent Van Gogh";
+// artists[8].name = "Vincent Van Gogh";
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
  Use getArtistByIndex to do the following:
@@ -286,8 +286,15 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(array){
+  array.push({
+  id: 20,
+  name: 'Andrew Cummings', 
+  years: '1987 - 2021',
+  genre: 'Web Design', 
+  nationality: 'Murica!',
+  bio: 'King of Joplin, King of the Missourians and the First Midwesterners, Sire of the Four-States Regnant, Khaleesi of the Great Sea of the Ozarks, Fhysa, Breaker of Codes, Unburned, Father of Dragons(someday).'})
+  return array;
   }
 
   
@@ -299,8 +306,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  let newArr = [];
+  for(let i = 0; i < array.length; i++) {
+    if(array[i].paintings > 100){
+      newArr.push(array[i].name)
+    }
+  }
+  return newArr;
 }
 
 
@@ -328,27 +341,36 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
+function getHTML(data){
+  for(let key in data) {
+    console.log(`${key}: ${data[key]}`)
+  }
   }
 
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(array){
+for(let i=0; i< array.length; i++){
+  array.push(array[Math.round(Math.random * array.length())])
+}
+return array;
   }
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- 
+ function artistFilter(array){
+  let filerArr = [];
+  for(let i=0; i<array.length; i++){
+    filterArr.push(array.filter((array => array.paintings < 50)))
+    
+      }
+      return filterArr;
+    }
+  
  
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
