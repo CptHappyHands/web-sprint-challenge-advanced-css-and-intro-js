@@ -157,5 +157,23 @@ button:hover{
         margin-left: 5%;
         font-size: 6vh;
     }
+
+    .artists-container{
+        display:flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        width: 80%;
+        margin:0 auto;
+    }
+    
+    .artist{
+        width:100%;
+        text-align:center;
+    }
+    .artist img{
+        width:70%;
+        height: 30vh;
+    }
+
     
 }
